@@ -1,27 +1,59 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+    background-color: #061A1B;
+    
+  overflow-x: hidden;
+
+}
+.svg-color{
+    color: #061A1B;
+
+}
+.svg-color:hover{
+    color: #13534B;
+}
+.navbar{
+    background: linear-gradient(to right, #124F47, #2F9E8E, #379888, #4DC1AB, #A1E1D5); /* You can adjust the color codes as needed */
+    /* background-size: 500% 500%; */
+}
+.signin_btn{
+    background-color: #204C48;
+}
+.tilted_box{
+    background-color: #64BAAA;
+}
+.hover-rotate-1{
+    transform: rotate(-3.73deg);
+    transition: transform 0.3s ease;
+}
+.hover-rotate-1:hover{
+    transform: rotate(0deg);
+    transition-delay: 0.2s;
+}
+.hover-rotate-2{
+    transform: rotate(6.14deg);
+    transition: transform 0.3s ease;
+}
+.hover-rotate-2:hover{
+    transform: rotate(0deg);
+    transition-delay: 0.2s;
+}
+.services{
+    height:535px;
+    background: linear-gradient(180deg, rgba(69, 116, 108, 0.160258) 0%, rgba(61, 101, 94, 0.65) 35.94%, rgba(69, 116, 108, 0.113393) 99.98%, rgba(69, 116, 108, 0.0440104) 99.99%, rgba(69, 116, 108, 0) 100%);
+    /* opacity: 0.7; */
+}
+.contactbtn{
+    background-color: rgba(20, 50, 47, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/* wave css */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+
+
+/* Rectangle 745 */
+
+
