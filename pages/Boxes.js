@@ -7,22 +7,17 @@ import Intro from './Intro'
 import WPossible   from './WPossible'
 import SVGComponent from './svg1'
 import SVGComponent2 from './svg2'
+import Circle from './ellipse'
   
 const jsans = Josefin_Sans({ subsets: ['latin'] })
 const pop = Poppins({ subsets: ['latin'], weight: ['400'] })
 
 export default function Boxes() {
-    const [Width, setDesiredWidth] = useState(0);
-    useEffect(() => {
-        const screenWidth = window.innerWidth +100;
-        const desiredWidth = screenWidth;
-        setDesiredWidth(desiredWidth)
-        // Use desiredWidth here
-      }, []);
-      
+  
 
     const [windowWidth, setWindowWidth] = useState(0);
 const [Hover, setHover] = useState(false)
+
     useEffect(() => {
         // Function to update window width
         const updateWindowWidth = () => {
@@ -74,14 +69,16 @@ const [Hover, setHover] = useState(false)
   return (
     <>
     <div className='w-screen opacity-85 absolute z-[-1]'> 
-        <SVGComponent width={Width } height='auto'/>
-        <SVGComponent2 width={Width} height='auto'/>
+    
+        <SVGComponent width={'100%'} height='auto'/>
+        <SVGComponent2 width={'100%'} height='auto'/>
+         </div>
         
-          </div>
+    
       <Intro Hover={Hover} />
         <WPossible />
     <div className='boxes mb-40'>
-
+   
             <div  className='flex justify-end '>
                 {/* marginLeft:'680px', */}
                 <div onMouseOverCapture={()=>{setHover(true)}} onMouseOut={()=>{setHover(false)}} className='w-1/2 box1 tilted_box p-4 sm:p-8 lg:p-10 mb-20 hover-rotate-1 m-auto sm:mr-36 lg:mr-44' style={boxStyle}>

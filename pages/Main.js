@@ -8,7 +8,7 @@ import WPossible from './WPossible'
 
 export default function Main() {
   return (
-    <div>
+    <div className='relative w-screen'>
       
         <Boxes />
         <Services />

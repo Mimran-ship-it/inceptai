@@ -20,19 +20,19 @@ const Intro = (Hover) => {
 
     return (
 
-        <div className={`inline-flex   `}>
+        <div className={`inline-flex  z-50 `}>
 
 
             {console.log('ss',Hovertrue)}
            
             {/* marginRight:'650px' */}
-            <div className='flex z-10 flex-col mt-10 sm:mt-16 md:mt-28 lg:mt-40 
+            <div className='flex  flex-col mt-10 sm:mt-16 md:mt-28 lg:mt-40 
                 mb-14 sm:mb-20 md:mb-28 lg:mb-48 mx-5 md:ml-8' style={{ color: '#87D7C8' }}>
                 {Hovertrue&& <motion.h1 initial={{ x: 0, y: 0 }} animate={{
                     x: -30,
                     y: 15,
                     rotate: 0,
-                }} transition={{ duration: .5 }} className={`${jsans.className} text-center md:text-left 
+                }} transition={{ duration: .5 }} className={`${jsans.className}  text-center md:text-left 
                     text-4xl sm:text-6xl lg:text-8xl font-bold mb-2`}
                     style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>InceptAI</motion.h1>}
                 {!Hovertrue&& <motion.h1 animate={{

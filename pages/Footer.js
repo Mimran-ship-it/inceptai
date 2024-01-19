@@ -6,7 +6,7 @@ const pop = Poppins({ subsets: ['latin'], weight: ['400'] })
 
 export default function Footer() {
   return (
-    <footer class="mb-20 text-gray-400 bg-white body-font">
+    <footer class="mb-20 text-gray-400 z-50 shadow-2xl bg-white body-font">
             <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
                 <div class="w-80 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
                     <h1 className={`${jsans.className} text-2xl md:text-4xl lg:text-5xl text-black font-bold mb-2 

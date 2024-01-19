@@ -7,6 +7,7 @@ import Image from 'next/image'
 import SignInBtn from './SignInBtn'
 import { Josefin_Sans, Poppins } from 'next/font/google'
 import { Menu } from 'react-feather';
+import Circle from './ellipse';
 
 const jsans = Josefin_Sans({ subsets: ['latin'] })
 const pop = Poppins({ subsets: ['latin'], weight: ['400'] })
@@ -18,7 +19,16 @@ export default function Nav() {
     setMenuOpen(!isMenuOpen);
   };
   return (
-    <header className="text-gray-400 bg-gray-900 body-font navbar">
+<div className='static mb-20 sm:mb-10'>
+  <div className='w-screen z-0'>
+    <Circle rotate={45} />
+   <div className='flex  flex-row-reverse relative top-[30rem]'> <Circle rotate={25} /></div>
+   <div className='flex  relative top-[60rem]'> <Circle rotate={0} /></div>
+   <div className='flex z-0 relative flex-row-reverse top-[90rem]'> <Circle rotate={-25} /></div>
+   <div className='flex z-0 relative  top-[120rem]'> <Circle rotate={-45} /></div>
+    
+  </div>
+  <header className="text-gray-400  bg-gray-900 body-font navbar absolute top-0 left-0 right-0 z-10">
       <div className="container md:mx-auto flex flex-wrap md:px-1 md:py-3 p-3
         md:flex-row md:items-center justify-between">
         <a className="flex title-font font-medium items-center text-white mb-0 
@@ -145,5 +155,6 @@ export default function Nav() {
 
       </div>
     </header>
+    </div>
   )
 }

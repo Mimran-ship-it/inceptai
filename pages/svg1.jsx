@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const SVGComponent = (props) => (
   <motion.svg
-  initial={{ x: 0, y: 20}}
-  animate={{ x: -90, y: 0, transition: { repeat: Infinity, duration: 2, repeatType: "reverse" } }}
-  transition={{ duration: 2,type:'spring' ,stiffness: 100 }}
+  // initial={{ x: 0, y: 20}}
+  // animate={{ x: -90, y: 0, transition: { repeat: Infinity, duration: 2, repeatType: "reverse" } }}
+  // transition={{ duration: 2,type:'spring' ,stiffness: 100 }}
 width={1363}
     height={351}
     viewBox="0 0 1363 351"
