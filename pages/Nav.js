@@ -19,7 +19,7 @@ export default function Nav() {
     setMenuOpen(!isMenuOpen);
   };
   return (
-<div className='static mb-20 sm:mb-10'>
+<div className='absolute mb-20 sm:mb-10'>
   <div className='w-screen z-0'>
     <Circle rotate={45} />
    <div className='flex  flex-row-reverse relative top-[30rem]'> <Circle rotate={25} /></div>
@@ -29,17 +29,17 @@ export default function Nav() {
     
   </div>
   <header className="text-gray-400  bg-gray-900 body-font navbar absolute top-0 left-0 right-0 z-10">
-      <div className="container md:mx-auto flex flex-wrap md:px-1 md:py-3 p-3
+      <div className="container md:mx-auto flex flex-wrap md:px-1 md:py-0 p-1
         md:flex-row md:items-center justify-between">
         <a className="flex title-font font-medium items-center text-white mb-0 
           md:space-x-0 lg:space-x-4 xl:space-x-10 ">
-          <Image src='/logo.png' alt='logo' width={55} height={60} className='hover:cursor-pointer'></Image>
-          <span className={`${jsans.className} mt-1 md:ml-0 lg:ml-3 text-black text-3xl font-bold hover:cursor-pointer`}
+          <Image src='/logo.png' alt='logo' width={60} height={65} className=' hover:cursor-pointer'></Image>
+          <span className={`${jsans.className} mt-1 md:ml-0 lg:ml-3 text-gray-200 text-3xl font-bold hover:cursor-pointer`}
             style={{textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>InceptAI</span>
         </a>
         <nav className={`${pop.className} md:mx-2.5 lg:mx-auto md:space-x-1.5 lg:space-x-5 xl:space-x-10
           hidden md:flex md:flex-wrap 
-          items-center text-base justify-center text-black  text-lg`}>
+          items-center text-base justify-center text-white  `}>
           <a className=" p-1 rounded hover:text-gray-100 hover:cursor-pointer">HOME</a>
           <a className=" p-1 rounded hover:text-gray-100 hover:cursor-pointer ">COMPANY</a>
           <a className=" p-1 rounded hover:text-gray-100 hover:cursor-pointer ">EVENTS</a>

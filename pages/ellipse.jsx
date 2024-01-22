@@ -35,7 +35,7 @@ const Circle = (rotate) => {
           // Loop the animation
           repeat: Infinity,
           repeatType: 'loop',
-          duration: 4, // Time in seconds for one rotation
+          duration: 8, // Time in seconds for one rotation
           ease: 'linear'
         }}
         style={{

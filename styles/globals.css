@@ -17,9 +17,26 @@ body{
     color: #13534B;
 }
 .navbar{
-    background: linear-gradient(to right, #124F47, #2F9E8E, #379888, #4DC1AB, #A1E1D5); /* You can adjust the color codes as needed */
+    background: #64BAAA; /*You can adjust the color codes as needed
+    /* background: ger You can adjust the color codes as needed */
     /* background-size: 500% 500%; */
 }
+.snap{
+
+  overflow-y: auto;
+  overscroll-behavior-y:contain;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  position: relative;
+}
+.section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start; /* or center, depending on your layout */
+  scroll-snap-type: y mandatory;
+}
+
+
 .signin_btn{
     background-color: #204C48;
 }
@@ -43,9 +60,9 @@ body{
     transition-delay: 0.2s;
 }
 .services{
-    height:535px;
     z-index: 1;
     background: linear-gradient(180deg, rgba(69, 116, 108, 0.160258) 0%, rgba(61, 101, 94, 0.65) 35.94%, rgba(69, 116, 108, 0.113393) 99.98%, rgba(69, 116, 108, 0.0440104) 99.99%, rgba(69, 116, 108, 0) 100%);
+    /* background: linear-gradient(180deg, rgba(69, 116, 108, 0.160258) 0%, rgba(61, 101, 94, 0.65) 35.94%, rgba(69, 116, 108, 0.113393) 99.98%, rgba(69, 116, 108, 0.0440104) 99.99%, rgba(69, 116, 108, 0) 100%); */
     /* opacity: 0.7; */
 }
 .contactbtn{
@@ -53,7 +70,34 @@ body{
 }
 
 /* wave css */
-
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Change the background color of the scrollbar track */
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  /* Change the color of the scrollbar handle (thumb) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #f1f1f1;
+  }
+  /* For WebKit-based browsers */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* For Firefox */
+  /* Change the width and color to your desired style */
+  html {
+    scrollbar-width: thin;
+  }
+  
+  /* Change the color of the scrollbar handle (thumb) in Firefox */
+  html {
+    scrollbar-color:#111111 #f1f1f1;
+  }
 
 
 /* Rectangle 745 */

@@ -4,12 +4,14 @@ import Boxes from './Boxes'
 import Services from './Services'
 import Footer from './Footer'
 import WPossible from './WPossible'
+import Nav from './Nav'
 
 
 export default function Main() {
   return (
-    <div className='relative w-screen'>
-      
+    <div className='snap overflow-x-hidden'>
+      <Nav/>
+      <Intro/>
         <Boxes />
         <Services />
         <Footer />

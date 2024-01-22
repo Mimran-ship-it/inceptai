@@ -1,20 +1,6 @@
 import * as React from "react"
-import { motion } from "framer-motion";
-const SvgComponent3 = ({coordinates},props) => (
-  
-  <motion.svg     animate={{
-    // Animate along the keyframes
-    translateX: coordinates?.coordinates?.map(frame => frame.x),
-    translateY: coordinates?.coordinates?.map(frame => frame.y),
-  }}
-  transition={{
-    // Loop the animation
-    repeat: Infinity,
-    // repeatDelay:.5,
-    repeatType: 'loop',
-    duration: 15, // Time in seconds for one rotation
-    ease: 'linear'
-  }}
+const SvgComponent3 = (props) => (
+  <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     width={42}
@@ -22,7 +8,6 @@ const SvgComponent3 = ({coordinates},props) => (
     fill="none"
     {...props}
   >
-    {console.log('  kkk',coordinates)}
     <path
       fill="url(#a)"
       d="M0 5.813h38v27H0z"
@@ -44,6 +29,6 @@ const SvgComponent3 = ({coordinates},props) => (
         height={360}
       />
     </defs>
-  </motion.svg>
+  </svg>
 )
 export default SvgComponent3;
