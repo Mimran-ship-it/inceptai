@@ -2,39 +2,53 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
 body{
     background-color: #061A1B;
     
-  overflow-x: hidden;
+  overflow-x: hidden; 
 
 }
 
 .svg-color{
-    color: #061A1B;
+    color: whitesmoke;
 
 }
 .svg-color:hover{
-    color: #13534B;
+  color: whitesmoke;
 }
 .navbar{
-    background: #64BAAA; /*You can adjust the color codes as needed
+    background: #0E2625; /*You can adjust the color codes as needed
     /* background: ger You can adjust the color codes as needed */
     /* background-size: 500% 500%; */
 }
 .snap{
 
-  overflow-y: auto;
-  overscroll-behavior-y:contain;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory ;
   height: 100vh;
+  overflow-y: scroll;  
   position: relative;
+  scroll-padding: 5rem;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
+
 .section {
   height: 100vh;
-  width: 100%;
-  scroll-snap-align: start; /* or center, depending on your layout */
-  scroll-snap-type: y mandatory;
+  scroll-snap-align: start; /* or center, depending on your layout */ 
+  scroll-snap-stop: always;
 }
+.section2{
+
+
+  width: 100vw;
+  height: fit-content;
+  scroll-snap-align: center; /* or center, depending on your layout */
+  scroll-snap-stop: normal; 
+
+   
+}
+
 
 
 .signin_btn{
@@ -76,12 +90,12 @@ body{
   
   /* Change the background color of the scrollbar track */
   ::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
+    background-color: #061A1B;
   }
   
   /* Change the color of the scrollbar handle (thumb) */
   ::-webkit-scrollbar-thumb {
-    background-color: #f1f1f1;
+    background-color: #061A1B;
   }
   /* For WebKit-based browsers */
   ::-webkit-scrollbar {
@@ -96,8 +110,10 @@ body{
   
   /* Change the color of the scrollbar handle (thumb) in Firefox */
   html {
-    scrollbar-color:#111111 #f1f1f1;
+    scrollbar-color:#061A1B #061A1B;
   }
+
+
 
 
 /* Rectangle 745 */
