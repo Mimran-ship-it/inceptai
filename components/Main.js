@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Intro from './Intro'
 import Boxes from './Boxes'
@@ -25,7 +26,7 @@ export default function Main() {
   
  }
  {console.log('jumbo is',jumbotronMobview)}
-{screen.width>700?<>{(!servicesVisible)&&<motion.div animate={{scale:1}} initial={{scale:0}} transition={{duration:.4}} className='w-screen  z-0'>
+ {typeof window !== 'undefined' && window.innerWidth > 700 ?<>{(!servicesVisible)&&<motion.div animate={{scale:1}} initial={{scale:0}} transition={{duration:.4}} className='w-screen  z-0'>
   <Circle rotate={25} />
   <Circle rotate={0} />
  <div className='flex  flex-row-reverse relative top-[20rem]'> 
