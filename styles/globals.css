@@ -38,6 +38,11 @@ body{
   scroll-snap-align: start; /* or center, depending on your layout */ 
   scroll-snap-stop: always;
 }
+.section1 {
+  /* height: sc; */
+  scroll-snap-align: start; /* or center, depending on your layout */ 
+  scroll-snap-stop: always;
+}
 .section2{
 
 

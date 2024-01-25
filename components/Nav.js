@@ -2,7 +2,9 @@
 
 import { useState } from 'react'
 import { Phone } from 'react-feather';
+import { AiOutlineClose } from "react-icons/ai";
 import React from 'react'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import SignInBtn from './SignInBtn'
 import { Josefin_Sans, Poppins } from 'next/font/google'
@@ -47,11 +49,11 @@ export default function Nav() {
         <SignInBtn />
         <button
             onClick={toggleMenu}
-            className=" md:hidden p-1 rounded hover:text-gray-100 hover:cursor-pointer focus:outline-none relative"
+            className=" md:hidden sm:left-12  left:0 sm:right-0 right-5  p-1 rounded hover:text-gray-100 hover:cursor-pointer focus:outline-none relative"
           >
-            <Menu className="h-8 w-8 svg-color" />
+            {!isMenuOpen?<Menu  className="h-8 w-8  svg-color" />:<motion.div initial={{ scale:0 }} animate={{ scale:1 }} transition={{duration:.2}} exit={{ opacity: 0 }}  className='svg-color text-3xl'><AiOutlineClose /></motion.div>}
             {isMenuOpen ? (
-              <div
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration:.5}} exit={{ opacity: 0 }}
                 className="absolute top-10 right-0 z-10 mt-2 w-56 rounded-md bg-teal-200 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                 role="menu"
                 aria-orientation="vertical"
@@ -143,7 +145,7 @@ export default function Nav() {
                     </button>
               </div>
             </div>
-          </div>
+          </motion.div>
         ) : null}
       </button>
 

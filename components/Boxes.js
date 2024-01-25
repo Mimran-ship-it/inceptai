@@ -39,7 +39,7 @@ const [ref, inViews] = useInView();
     useEffect(() => {
         console.log('i am in view intro')
         console.log('jumbo is',screen.width)  
-        screen.width < 640 ? setjumbotronMobview(true) : setjumbotronMobview(false)
+        screen.width < 700 ? setjumbotronMobview(true) : setjumbotronMobview(false)
     }, [inViews])
     const responsiveStyles = {
         width: 
@@ -73,7 +73,7 @@ const [ref, inViews] = useInView();
   return (
     <div ref={ref} className='section2'  >
      
-     {(inViews&&screen.width>640)&&<div className='absolute left-0 w-screen flex justify-center items-center h-screen'>
+     {(inViews&&screen.width>700)&&<div className='absolute left-0 w-screen flex justify-center items-center h-screen'>
 <Circle rotate={45} />
   <Circle rotate={-25} />
 
@@ -110,7 +110,7 @@ const [ref, inViews] = useInView();
             
 
 <div className='h-screen relative'>
-{(inViews&&screen.width>640)&&<div className='absolute left-0 w-screen flex justify-center items-center h-screen'>
+{(inViews&&screen.width>700)&&<div className='absolute left-0 w-screen flex justify-center items-center h-screen'>
 <Circle rotate={-25} />
   <Circle rotate={25} />
 
