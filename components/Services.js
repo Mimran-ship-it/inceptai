@@ -15,7 +15,11 @@ export default function Services() {
   const { setservicesVisible } = useCartContext()
   // console.log('serviceVisible',serviceVisible)
   const [ref, inView] = useInView();
-  setservicesVisible(inView)
+  useEffect(() => {
+    setservicesVisible(inView)
+  
+  }, [inView])
+  
   const [coordinates, setCoordinates] = useState([]);
 
   useEffect(() => {
@@ -30,6 +34,7 @@ export default function Services() {
 
   return (
     <div ref={ref} className='section   '>
+      {console.log('inview is',inView)}
       <div className='services z-50 w-screen flex flex-col  justify-center
         py-6 sm:py-14 md:py-20 lg:py-28 px-14'>
         <div className='sm:h-[40vh] h-[45vh] mt-7'>

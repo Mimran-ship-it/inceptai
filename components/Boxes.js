@@ -12,7 +12,6 @@ const jsans = Josefin_Sans({ subsets: ['latin'] })
 const pop = Poppins({ subsets: ['latin'], weight: ['400'] })
 
 export default function Boxes() {
-    const { jumbotronMobview, setjumbotronMobview } = useCartContext();
   
 const [ref, inViews] = useInView();
 
@@ -36,11 +35,7 @@ const [ref, inViews] = useInView();
         };
     }, []);
      
-    useEffect(() => {
-        console.log('i am in view intro')
-        console.log('jumbo is',screen.width)  
-        screen.width < 700 ? setjumbotronMobview(true) : setjumbotronMobview(false)
-    }, [inViews])
+   
     const responsiveStyles = {
         width: 
           windowWidth >= 1024

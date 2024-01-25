@@ -15,22 +15,16 @@ const pop = Poppins({ subsets: ['latin'], weight: ['400'] })
 const Intro = () => {
     const {  setjumbotronMobview } = useCartContext();
     
-    
-    
-    //    console.log('jumbo is',screen.width)
-    const [ref, inView] = useInView();
-    useEffect(() => {
-        console.log('i am in view box')
-      setjumbotronMobview(false)
-    }, [inView])
-
+    const [ref, inView] = useInView()
+    const [ref1, inView1] = useInView()
+    setjumbotronMobview(inView1)
     return (
 
         <motion.div  initial={{scale:0}} animate={{scale:1}} className='section bg-black bg-opacity-20   inline-flex w-screen '>
 
 {inView&&<motion.video initial={{ opacity: 0,scale:0    }}  animate={{  opacity: .5, scale: 1}} transition={{ delay: .5,duration:.5,stiffness:50 }} type="video/mp4" src="/video/bgvideo.mp4" autoPlay data-autoPlay muted  loop playsInline className="-z-10   fixed  top-auto bottom-auto sm:w-screen h-screen object-fill sm:object-cover  "/>}
             {/* marginRight:'650px' */}
-            <div  className='flex items-center  justify-center  flex-col mt-10 sm:mt-16 md:mt-28 lg:mt-40 
+            <div ref={ref1}  className='flex items-center  justify-center  flex-col mt-10 sm:mt-16 md:mt-28 lg:mt-40 
                 mb-14 sm:mb-20 md:mb-28 lg:mb-48 mx-5 md:ml-8' style={{ color: '#87D7C8' }}>
                 
                  <h1 ref={ref}  className={`${jsans.className} text-center md:text-left 

@@ -25,7 +25,7 @@ export default function Main() {
   
  }
  {console.log('jumbo is',jumbotronMobview)}
-{(!servicesVisible&&!jumbotronMobview)&&<motion.div animate={{scale:1}} initial={{scale:0}} transition={{duration:.4}} className='w-screen  z-0'>
+{screen.width>700?<>{(!servicesVisible)&&<motion.div animate={{scale:1}} initial={{scale:0}} transition={{duration:.4}} className='w-screen  z-0'>
   <Circle rotate={25} />
   <Circle rotate={0} />
  <div className='flex  flex-row-reverse relative top-[20rem]'> 
@@ -33,7 +33,15 @@ export default function Main() {
  <Circle rotate={45} />
  </div>
   
-</motion.div> }
+</motion.div>}</>:<>{(!servicesVisible&&!jumbotronMobview)&&<motion.div animate={{scale:1}} initial={{scale:0}} transition={{duration:.4}} className='w-screen  z-0'>
+  <Circle rotate={25} />
+  <Circle rotate={0} />
+ <div className='flex  flex-row-reverse relative top-[20rem]'> 
+ <Circle rotate={25} />
+ <Circle rotate={45} />
+ </div>
+  
+</motion.div>}</>}
 {(jumbotronMobview)&&<motion.div animate={{scale:0}} initial={{scale:1}} transition={{duration:.4}} className='w-screen  z-0'>
   <Circle rotate={25} />
   <Circle rotate={0} />
