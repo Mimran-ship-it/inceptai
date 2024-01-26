@@ -20,6 +20,7 @@ export default function Services() {
   
   }, [inView])
   
+  const [clientSide, setclientSide] = useState(false);
   const [coordinates, setCoordinates] = useState([]);
 
   useEffect(() => {
@@ -30,6 +31,7 @@ export default function Services() {
     });
     // Log the coordinates to the console
     setCoordinates(coordinates2);
+    setclientSide(true);
   }, []);
 
   return (
@@ -53,14 +55,14 @@ export default function Services() {
         </div>
 
         <div className='relative  sm:h-[30vh] h-[45vh] mt-auto mb-auto  '>
-        <div className='relative flex items-center 2xl:space-y-0 space-y-10  flex-col '>
-             <div className='relative flex w-screen justify-center md:space-x-24 space-x-11 me-10'> <img className='2xl:absolute z-10 top-14 md:w-28 w-20  2xl:w-[7%]' style={{ left: '17%'}} src='/svg/Service1.svg' alt="Service 1" />
-              <img className='2xl:absolute z-10 md:w-28 w-20 top-32  2xl:w-[7%]' style={{ left: '33%' }} src='/svg/Service2.svg' alt="Service 2" />
-              <img className='2xl:absolute z-10 md:w-28 w-20 top-36  2xl:w-[7%]' style={{ left: '52%' }} src='/svg/Service3.svg' alt="Service 3" /></div>
-             <div className='md:space-x-24 relative justify-center space-x-11 flex w-screen '> <img className='2xl:absolute z-10 md:w-28 w-20 top-44  2xl:w-[7%]' style={{ left: '66%' }} src='/svg/Service4.svg' alt="Service 4" />
-              <img className='2xl:absolute z-10 md:w-28 w-20 top-16  2xl:w-[7%]' style={{ left: '67%'}} src='/svg/Service5.svg' alt="Service 5" /></div>
-            </div>
-          <div className=' relative 2xl:block hidden top-10'>
+        {clientSide&&<div className='relative flex items-center 2xl:space-y-0 space-y-10  flex-col '>
+             <div className='relative flex w-screen justify-center md:space-x-24 space-x-11 me-10'> <img className={`2xl:absolute z-10 top-14 ${window.innerWidth<380?'w-12 mt-8 ms-4':'w-20'} md:w-28   2xl:w-[7%]`} style={{ left: '17%'}} src='/svg/Service1.svg' alt="Service 1" />
+              <img className={`2xl:absolute z-10 md:w-28 ${window.innerWidth<380?'w-12 mt-8':'w-20'} top-32  2xl:w-[7%]`} style={{ left: '33%' }} src='/svg/Service2.svg' alt="Service 2" />
+              <img className={`2xl:absolute z-10 md:w-28 ${window.innerWidth<380?'w-12 mt-8':'w-20'} top-36  2xl:w-[7%]`} style={{ left: '52%' }} src='/svg/Service3.svg' alt="Service 3" /></div>
+             <div className='md:space-x-24 relative justify-center space-x-11 flex w-screen '> <img className={`2xl:absolute z-10 md:w-28 ${window.innerWidth<380?'w-12 ':'w-20'} top-44  2xl:w-[7%]`} style={{ left: '66%' }} src='/svg/Service4.svg' alt="Service 4" />
+              <img className={`2xl:absolute z-10 md:w-28 ${window.innerWidth<380?'w-12':'w-20'} top-16  2xl:w-[7%]`} style={{ left: '67%'}} src='/svg/Service5.svg' alt="Service 5" /></div>
+            </div>}
+        { inView&& <div className=' relative 2xl:block hidden top-10'>
             <div className='absolute font-extrabold left-28 top-12 '>
               <SVGComponent8 style={{ top: '20%' }} />
             </div>
@@ -68,7 +70,7 @@ export default function Services() {
               <SVGComponent3 />
             </div>
       
-          </div>
+          </div>}
         </div>
       </div>
 

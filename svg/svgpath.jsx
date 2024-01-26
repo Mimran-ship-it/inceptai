@@ -46,6 +46,7 @@ export const SVGComponent3 = () => (
         repeatCount="indefinite"  // Make the animation repeat indefinitely
       >
         <mpath href="#motionPath" />
+        
       </animateMotion>
       </image>
 
