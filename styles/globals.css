@@ -118,6 +118,12 @@ body{
     scrollbar-color:#061A1B #061A1B;
   }
 
+  .headroom {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
 
 
 

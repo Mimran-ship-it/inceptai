@@ -5,6 +5,7 @@ import Boxes from './Boxes'
 import Services from './Services'
 import Footer from './Footer'
 import WPossible from './WPossible'
+import Headroom from 'react-headroom'
 import Nav from './Nav'
 import Circle from './ellipse'
 import { useCartContext } from '@/pages/index'
@@ -48,6 +49,7 @@ export default function Main() {
 
 
       <Nav/>
+
     <div className='snap '>
       <Intro/>
         <Boxes />

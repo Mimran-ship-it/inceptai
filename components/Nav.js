@@ -5,11 +5,13 @@ import { Phone } from 'react-feather';
 import { AiOutlineClose } from "react-icons/ai";
 import React from 'react'
 import { motion } from 'framer-motion'
+import Headroom from 'react-headroom';
 import Image from 'next/image'
 import SignInBtn from './SignInBtn'
 import { Josefin_Sans, Poppins } from 'next/font/google'
 import { Menu } from 'react-feather';
 import { useInView } from 'react-hook-inview'
+import Head from 'next/head';
 
 const jsans = Josefin_Sans({ subsets: ['latin'] })
 const pop = Poppins({ subsets: ['latin'], weight: ['400'] })
@@ -22,6 +24,7 @@ export default function Nav() {
     setMenuOpen(!isMenuOpen);
   };
   return (
+<Headroom  className='headroom  '>
 <div  className='absolute mb-20  left-0 sm:mb-10'>
 
   <header className="text-gray-400 w-screen   bg-gray-900 body-font navbar absolute top-0 left-0 right-0 z-10">
@@ -49,9 +52,9 @@ export default function Nav() {
         <SignInBtn />
         <button
             onClick={toggleMenu}
-            className=" md:hidden sm:left-12  left:0 sm:right-0 right-5  p-1 rounded hover:text-gray-100 hover:cursor-pointer focus:outline-none relative"
+            className=" md:hidden sm:left-12  left:0 sm:right-0 right-5  p-1 rounded hover:text-gray-100 hover:cursor-pointer focus:outline-none relative "
           >
-            {!isMenuOpen?<Menu  className="h-8 w-8  svg-color" />:<motion.div initial={{ scale:0 }} animate={{ scale:1 }} transition={{duration:.2}} exit={{ opacity: 0 }}  className='svg-color text-3xl'><AiOutlineClose /></motion.div>}
+            {!isMenuOpen?<Menu   className="h-8 w-8  svg-color" />:<motion.div initial={{ scale:0 }} animate={{ scale:1 }} transition={{duration:.2}} exit={{ opacity: 0 }}  className='svg-color text-3xl'><AiOutlineClose /></motion.div>}
             {isMenuOpen ? (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration:.5}} exit={{ opacity: 0 }}
                 className="absolute top-10 right-0 z-10 mt-2 w-56 rounded-md bg-teal-200 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
@@ -152,5 +155,6 @@ export default function Nav() {
       </div>
     </header>
     </div>
+    </Headroom>
   )
 }
