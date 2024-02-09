@@ -20,7 +20,7 @@ const Intro = () => {
     setjumbotronMobview(inView1)
     return (
 
-        <motion.div  initial={{scale:0}} animate={{scale:1}} className='section bg-black bg-opacity-20   inline-flex w-screen '>
+        <div className='section bg-black bg-opacity-20   inline-flex w-screen '>
 
 {inView&&<motion.video initial={{ opacity: 0,scale:0    }}  animate={{  opacity: .5, scale: 1}} transition={{ delay: .5,duration:.5,stiffness:50 }} type="video/mp4" src="/video/bgvideo.mp4" autoPlay data-autoPlay muted  loop playsInline className="-z-10   fixed  top-auto bottom-auto sm:w-screen h-screen object-fill sm:object-cover  "/>}
             {/* marginRight:'650px' */}
@@ -29,7 +29,9 @@ const Intro = () => {
                 
                  <h1 ref={ref}  className={`${jsans.className} text-center md:text-left 
                     text-4xl sm:text-6xl mb-3  lg:text-8xl font-bold sm:mb-2`}
-                    style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>InceptAI</h1>
+                    style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>{'InceptAI'.split('').map((char,t)=>{
+                        return <motion.span initial={{opacity:0}} animate={{opacity:1}} transition={{delay:t*.2}} >{char}</motion.span >
+                    })}</h1>
                 <p className={`${pop.className}   md:w-2/3 text-center lg:w-1/2
                     text-xs sm:text-sm md:text-base  `}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod consequat viverra.
@@ -37,7 +39,7 @@ const Intro = () => {
                     uctor metus. In hendrerit lacinia massa vitae imperdiet. Integer at felis risus.
                 </p>
             </div>
-        </motion.div>
+        </div>
     )
 }
 export default Intro
